@@ -1,0 +1,27 @@
+#python program 
+#Copying a stack into another stack using a temporary stack
+
+#Original stack
+original = []
+n = int(input("Enter number of elements: "))
+for i in range(n):
+    val = input(f"Enter element {i+1}: ")
+    original.append(val)
+
+print("Original Stack:", original)            #Display original stack
+
+#Use a temporary stack to reverse the original
+temp = []
+while original:
+    temp.append(original.pop())
+
+#Copy to new stack and restore original
+copy = []
+while temp:
+    val = temp.pop()
+    original.append(val)
+    copy.append(val)
+
+#Display both stacks
+print("Copied Stack:  ", copy)
+print("Restored Original Stack:", original)
