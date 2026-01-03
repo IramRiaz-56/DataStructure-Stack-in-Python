@@ -6,10 +6,10 @@ class Stack:
     def __init__(self):
         self.stack = []
 
-    def push(self, value):
+    def push(self, value):           # Enter value in Stack
         self.stack.append(value)
 
-    def pop(self):
+    def pop(self):                    # Delete value from Stack
         if not self.is_empty():
             return self.stack.pop()
         return None
